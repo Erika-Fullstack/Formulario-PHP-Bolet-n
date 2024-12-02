@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <style>
+        .opciones 
+        {
+            display: flex;
+            justify-content: space-between; /* Distribuir espacio entre las secciones */
+        }
+        .sexo, .estudios, .temas 
+        {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .opciones label, .opciones p 
+        {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="procesar.php" method="POST" enctype="multipart/form-data"></form>
+    <h1>Suscripción electrónica a nuestro boletín.</h1>
+
+    <form>
+        <label>
+        Nombre: 
+        <input type="text" name="name">
+        </label>
+
+        <label>
+        Apellidos: 
+        <input type="text" name="apellido">
+        </label>
+
+        <label>
+        e-mail: 
+        <input type="text" name="mail">
+        </label>
+        
+        <br>
+        <br>
+
+        <label>
+        contraseña: 
+        <input type="text" name="contraseña">
+        </label>
+
+        <div class="opciones">
+            <div class="sexo">
+                <p>Sexo:</p>
+                <label>
+                    <input type="radio" name="sexo" value="Masculino">
+                    Varón
+                </label>
+                <label>
+                    <input type="radio" name="sexo" value="Femenino">
+                    Mujer
+                </label>
+            </div>
+    
+            <div class="estudios">
+                <p>Nivel de estudios:</p>
+                <label>
+                    <input type="radio" name="estudios" value="certificado">
+                    Certificado
+                </label>
+                <label>
+                    <input type="radio" name="estudios" value="Eso">
+                    Graduado de E.S.O.
+                </label>
+                <label>
+                    <input type="radio" name="estudios" value="Bachiller">
+                    Bachiller - Formación Profesional  
+                </label>  
+                <label>
+                    <input type="radio" name="estudios" value="Diplomado">
+                    Diplomado  
+                </label>
+                <label>
+                    <input type="radio" name="estudios" value="Licenciado">
+                    Licenciado o Doctorado 
+                </label>
+            </div>
+    
+            <div class="temas">
+                <p>Interesado en los siguientes temas:</p>
+                <label>
+                    <input type="radio" name="temas" value="musica">
+                    Música
+                </label>
+                <label>
+                    <input type="radio" name="temas" value="deportes">
+                    Deportes
+                </label>
+                <label>
+                    <input type="radio" name="temas" value="cine">
+                    Cine 
+                </label>  
+                <label>
+                    <input type="radio" name="temas" value="libros">
+                    Libros  
+                </label>
+                <label>
+                    <input type="radio" name="temas" value="ciencia">
+                    Ciencia
+                </label>
+            </div>
+        </div>
+
+        <p>Día de la semana que le interesa recibirlo:</p>
+
+        <select name="dias">
+        <option value="" disabled selected>día de la semana</option>
+        <option value="lunes">Lunes</option>
+        <option value="martes">Martes</option>
+        <option value="miercoles">Miércoles</option>
+        <option value="jueves">Jueves</option>
+        <option value="viernes">Viernes</option>
+        <option value="sabado">Sábado</option>
+        <option value="domingo">Domingo</option>
+        </select>
+
+        <br>
+        <br>
+        <label>Su opinión:</label>
+        <br>
+        <textarea name="mensaje" cols="30" rows="10"></textarea>
+
+        <br>
+        <button type="submit">Comprobar el formulario</button>
+        <button type="submit">Borrar todo</button>
+    </form>
+</body>
+</html>
